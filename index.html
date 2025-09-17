@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Block Breaker - Ultimate Brick Breaking Game | Play Now</title>
+    <meta name="description" content="Play the ultimate Block Breaker game online! Break bricks, score points, and master challenging levels. Free to play with fullscreen mode and responsive controls.">
+    <meta name="keywords" content="block breaker, brick breaker, arcade game, online game, retro game, breakout game">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Block Breaker - Ultimate Brick Breaking Game">
+    <meta property="og:description" content="Play the ultimate Block Breaker game online! Break bricks, score points, and master challenging levels.">
+    
+    <!-- Twitter tags -->
+    <meta name="twitter:title" content="Block Breaker - Ultimate Brick Breaking Game">
+    <meta name="twitter:description" content="Play the ultimate Block Breaker game online! Break bricks, score points, and master challenging levels.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f8fafc;
+            --border-color: #e5e7eb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[var(--secondary-color)] transition-colors duration-200;
+        }
+        
+        .btn-secondary {
+            @apply bg-white text-[var(--primary-color)] border-2 border-[var(--primary-color)] px-6 py-3 rounded-lg font-semibold hover:bg-[var(--primary-color)] hover:text-white transition-colors duration-200;
+        }
+        
+        .game-canvas {
+            @apply border-4 border-[var(--primary-color)] rounded-lg shadow-lg bg-black;
+        }
+        
+        .section-card {
+            @apply bg-white rounded-xl p-8 shadow-lg border border-[var(--border-color)];
+        }
+    }
+    </style>
+</head>
+<body class="bg-[var(--bg-light)]">
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/GameCanvas.js"></script>
+    <script type="text/babel" src="components/HowToPlay.js"></script>
+    <script type="text/babel" src="components/FAQ.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="utils/gameEngine.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>

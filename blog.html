@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Block Breaker Blog - Gaming Tips, Strategies & News | Latest Articles</title>
+    <meta name="description" content="Read the latest Block Breaker blog posts featuring gaming strategies, tips, history of brick breaker games, and expert insights to improve your gameplay.">
+    <meta name="keywords" content="block breaker blog, gaming tips, brick breaker strategy, arcade games, retro gaming, breakout history">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Block Breaker Blog - Gaming Tips & Strategies">
+    <meta property="og:description" content="Read the latest Block Breaker blog posts featuring gaming strategies, tips, and expert insights.">
+    
+    <!-- Twitter tags -->
+    <meta name="twitter:title" content="Block Breaker Blog - Gaming Tips & Strategies">
+    <meta name="twitter:description" content="Read the latest Block Breaker blog posts featuring gaming strategies, tips, and expert insights.">
+
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #3b82f6;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f8fafc;
+            --border-color: #e5e7eb;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3 {
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[var(--secondary-color)] transition-colors duration-200;
+        }
+        
+        .section-card {
+            @apply bg-white rounded-xl p-8 shadow-lg border border-[var(--border-color)];
+        }
+        
+        .blog-card {
+            @apply bg-white rounded-lg shadow-md border border-[var(--border-color)] overflow-hidden hover:shadow-lg transition-shadow duration-200;
+        }
+    }
+    </style>
+</head>
+<body class="bg-[var(--bg-light)]">
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/Footer.js"></script>
+    <script type="text/babel" src="blog-app.js"></script>
+</body>
+</html>
